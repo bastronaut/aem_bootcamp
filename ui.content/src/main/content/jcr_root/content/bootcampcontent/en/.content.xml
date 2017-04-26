@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:cloudserviceconfigs="[[]]"
-        cq:lastModified="{Date}2017-04-24T22:34:33.538+02:00"
+        cq:lastModified="{Date}2017-04-26T13:05:59.410+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/apps/adobebootcamp/templates/countryPage"
         jcr:primaryType="cq:PageContent"
@@ -13,5 +13,12 @@
             jcr:lastModified="{Date}2017-04-24T22:34:33.535+02:00"
             jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"/>
+        <pageheader
+            jcr:lastModified="{Date}2017-04-26T13:05:59.400+02:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="adobebootcamp/components/content/header-image"
+            backgroundimageReference="/content/dam/bootcampcontent/highway-edge.jpg"/>
     </jcr:content>
+    <en/>
 </jcr:root>
