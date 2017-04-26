@@ -13,9 +13,11 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<!--/* Include the site client libraries (loading only the CSS in the header, JS will be loaded in the footer) */-->
+<!--/* Include the site client libraries (loading only the CSS in the header, JS will be loaded in the footer ) */-->
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.css @ categories='bootcamp.all'}" data-sly-unwrap/>
 
+<!--/* exception for jquery, needed for author mode */-->
+<meta data-sly-call="${clientLib.js @ categories='granite.jquery'}" data-sly-unwrap></meta>
 <!--/* Include Adobe Dynamic Tag Management libraries for the header */-->
 <sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap/>
 

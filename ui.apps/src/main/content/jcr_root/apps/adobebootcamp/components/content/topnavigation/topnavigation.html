@@ -1,21 +1,43 @@
-<!--/*
-    Copyright 2015 Adobe Systems Incorporated
-  
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-  
-        http://www.apache.org/licenses/LICENSE-2.0
-  
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-*/-->
-<p data-sly-test="${properties.text}">Text property: ${properties.text}</p>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" data-sly-use.hello="com.adobebootcamp.core.models.DebugExperiment">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                Menu <i class="fa fa-bars"></i>
+            </button>
+            <span class="navbar-brand" href="en.html">${hello.helloWorldMessage @ context='text'}</span>
+        </div>
 
-<pre data-sly-use.hello="com.adobebootcamp.core.models.HelloWorldModel">
-HelloWorldModel says:
-${hello.message}
-</pre>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" data-sly-use.navigation="com.adobebootcamp.core.models.Navigation">
+                <li>
+                    <a href="#">Homepage title here</a> <!-- Start exercise here -->
+                </li>
+                <sly data-sly-list.navItem="${navigation.topPage.childPages}">
+                    <li>
+                        <a href="${navItem.path}">${navItem.title}</a>
+                    </li>
+                </sly>
+
+                <!---->
+                <!--<li>-->
+                    <!--<a href="en/en.html">Home</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="en/about.html">About</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="en/sample.html">Sample Post</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="en/contact.html">Contact</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
