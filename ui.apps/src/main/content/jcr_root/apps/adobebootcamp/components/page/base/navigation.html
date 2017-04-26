@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" data-sly-use.hello="com.adobebootcamp.core.models.DebugExperiment">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -7,7 +7,7 @@
                 <span class="sr-only">Toggle navigation</span>
                 Menu <i class="fa fa-bars"></i>
             </button>
-            <span class="navbar-brand" href="en.html">Adobe Bootcamp</span>
+            <span class="navbar-brand" href="en.html">${hello.helloworldmessage}</span>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

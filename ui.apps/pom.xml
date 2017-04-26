@@ -224,5 +224,11 @@
             <groupId>com.day.cq.wcm</groupId>
             <artifactId>cq-wcm-taglib</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+        </dependency>
+
     </dependencies>
 </project>

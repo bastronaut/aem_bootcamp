@@ -25,7 +25,7 @@
     <modules>
         <module>core</module>
         <module>ui.apps</module>
-        <module>ui.content</module>
+        <!--<module>ui.content</module>-->
     </modules>
 
     <properties>
@@ -176,6 +176,7 @@
                             <artifactId>slf4j-simple</artifactId>
                             <version>1.5.11</version>
                         </dependency>
+
                     </dependencies>
                 </plugin>
                 <!-- Maven Installer Plugin -->
@@ -228,15 +229,22 @@
                     <configuration>
                         <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
                         <failOnError>true</failOnError>
-                        <failOnMissingEmbed>true</failOnMissingEmbed>
                     </configuration>
                 </plugin>
                 <!-- Apache Felix Bundle Plugin -->
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
+                    <extensions>true</extensions>
                     <version>2.5.3</version>
                     <inherited>true</inherited>
+                    <configuration>
+                        <instructions>
+                            <Embed-Dependency>javax.inject, jsch, jzlib</Embed-Dependency>
+                            <Bundle-SymbolicName>com.adobebootcamp.core</Bundle-SymbolicName>
+                            <Sling-Model-Packages>com.adobebootcamp.core.models</Sling-Model-Packages>
+                        </instructions>
+                    </configuration>
                 </plugin>
                 <!-- Maven Enforcer Plugin -->
                 <plugin>
@@ -395,11 +403,13 @@
                 <version>1.9.6</version>
                 <scope>provided</scope>
             </dependency>
+
+
             <dependency>
-        <groupId>biz.aQute</groupId>
-        <artifactId>bndlib</artifactId>
-        <version>1.50.0</version>
-        <scope>provided</scope>
+                <groupId>biz.aQute</groupId>
+                <artifactId>bndlib</artifactId>
+                <version>1.50.0</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.osgi</groupId>
@@ -413,6 +423,27 @@
                 <version>4.2.0</version>
                 <scope>provided</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-bundle</artifactId>
+                <version>2.9.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.acs</groupId>
+                <artifactId>acs-aem-commons-content</artifactId>
+                <version>2.9.0</version>
+                <scope>provided</scope>
+                <type>content-package</type>
+            </dependency>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>1</version>
+                <scope>provided</scope>
+            </dependency>
+
             <!-- Logging Dependencies -->
             <dependency>
                 <groupId>org.slf4j</groupId>

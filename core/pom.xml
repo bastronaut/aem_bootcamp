@@ -39,12 +39,17 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <!--
-                        <Embed-Dependency>
-                            artifactId1,
-                            artifactId2;inline=true
-                        </Embed-Dependency>
-                        -->
+
+                        <!--<Import-Package>javax.inject;version="1"</Import-Package>-->
+                        <!--<Embed-Dependency>-->
+                            <!--javax.inject;inline=true-->
+                        <!--</Embed-Dependency>-->
+
+
+                        <!--<Embed-Dependency>jsch, jzlib, javax.inject</Embed-Dependency>-->
+                        <!--<Export-Package>-->
+                            <!--javax.inject-->
+                        <!--</Export-Package>-->
                         <Sling-Model-Packages>
                             com.adobebootcamp.core
                         </Sling-Model-Packages>
@@ -131,6 +136,10 @@
         <dependency>
             <groupId>junit-addons</groupId>
             <artifactId>junit-addons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
         </dependency>
     </dependencies>
 </project>
