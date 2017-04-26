@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/content/bootcampcontent"/>
-    <filter root="/content/dam/bootcampcontent"/>
+    <filter root="/content/bootcampcontent" mode="merge"/>
+    <filter root="/content/dam/bootcampcontent" mode="merge"/>
 </workspaceFilter>
