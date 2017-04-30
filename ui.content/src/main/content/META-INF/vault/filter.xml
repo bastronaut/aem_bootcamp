@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/content/bootcampcontent" mode="merge"/>
-    <filter root="/content/dam/bootcampcontent" mode="merge"/>
+    <filter root="/content/bootcampcontent" mode="update"/>
+    <filter root="/content/dam/bootcampcontent" mode="update"/>
+
+    <filter root="/etc/designs/bavaria86" />
 </workspaceFilter>
