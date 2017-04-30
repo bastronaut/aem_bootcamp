@@ -11,16 +11,18 @@
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/parsys">
+            <title_941661208
+                    jcr:created="{Date}2017-04-26T18:51:08.228+02:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2017-04-26T18:51:08.228+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Our Posts:"
+                    sling:resourceType="adobebootcamp/components/content/title"/>
             <post-preview
                 jcr:primaryType="nt:unstructured"
+                posturl="/content/bootcampcontent/en/en/sample.html"
                 sling:resourceType="adobebootcamp/components/content/post-preview"/>
-            <title_941661208
-                jcr:created="{Date}2017-04-26T18:51:08.228+02:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2017-04-26T18:51:08.228+02:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="adobebootcamp/components/content/title"/>
             <post-preview_2
                 jcr:primaryType="nt:unstructured"
                 posturl="/content/bootcampcontent/en/en/sample.html"
@@ -33,13 +35,6 @@
                 jcr:primaryType="nt:unstructured"
                 posturl="/content/bootcampcontent/en/en/sample.html"
                 sling:resourceType="adobebootcamp/components/content/post-preview"/>
-            <exercise_one_compone_1081224710
-                jcr:lastModified="{Date}2017-04-26T21:21:26.066+02:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="adobebootcamp/components/content/exercise-one-component"
-                goodbyetext="Thanks for the training, see you later! "
-                hellotext="Hello there bootcampees!"/>
         </par>
         <pageheader
             jcr:lastModified="{Date}2017-04-26T17:07:34.516+02:00"
