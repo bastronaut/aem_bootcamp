@@ -11,15 +11,6 @@
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/parsys">
-            <exercise_one_compone
-                jcr:created="{Date}2017-04-26T21:22:20.127+02:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2017-04-26T21:38:45.556+02:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="adobebootcamp/components/content/exercise-one-component"
-                goodbyetext="Thanks for the free food, goodbye!"
-                hellotext="Hey there peeps!!"/>
             <post-preview
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="adobebootcamp/components/content/post-preview"/>
@@ -32,12 +23,15 @@
                 sling:resourceType="adobebootcamp/components/content/title"/>
             <post-preview_2
                 jcr:primaryType="nt:unstructured"
+                posturl="/content/bootcampcontent/en/en/sample.html"
                 sling:resourceType="adobebootcamp/components/content/post-preview"/>
             <post-preview_3
                 jcr:primaryType="nt:unstructured"
+                posturl="/content/bootcampcontent/en/en/sample.html"
                 sling:resourceType="adobebootcamp/components/content/post-preview"/>
             <post-preview_4
                 jcr:primaryType="nt:unstructured"
+                posturl="/content/bootcampcontent/en/en/sample.html"
                 sling:resourceType="adobebootcamp/components/content/post-preview"/>
             <exercise_one_compone_1081224710
                 jcr:lastModified="{Date}2017-04-26T21:21:26.066+02:00"
