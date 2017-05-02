@@ -104,6 +104,12 @@
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-bundle</artifactId>
+        </dependency>
+
         <!-- Other Dependencies -->
         <dependency>
             <groupId>org.slf4j</groupId>

@@ -12,20 +12,15 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" data-sly-use.navigation="com.adobebootcamp.core.models.Navigation">
                 <li>
-                    <a href="/content/bootcampcontent/en/en.html">Home</a>
+                    <a href="#">Homepage title here</a> <!-- Start exercise here -->
                 </li>
-                <li>
-                    <a href="/content/bootcampcontent/en/en/about.html">About</a>
-                </li>
-                <li>
-                    <a href="/content/bootcampcontent/en/en/sample.html">Sample Post</a>
-                </li>
-                <li>
-                    <a href="/content/bootcampcontent/en/en/contact.html">Contact</a>
-                </li>
-            </ul>
+                <sly data-sly-list.navItem="${navigation.topPage.childPages}">
+                    <li>
+                        <a href="${navItem.path}">${navItem.title}</a>
+                    </li>
+                </sly>
         </div>
         <!-- /.navbar-collapse -->
     </div>
