@@ -211,10 +211,9 @@
             <artifactId>acs-aem-commons-bundle</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>aem-api</artifactId>
+            <artifactId>uber-jar</artifactId>
         </dependency>
 
         <dependency>

@@ -46,12 +46,13 @@
                         <!--</Embed-Dependency>-->
 
 
-                        <!--<Embed-Dependency>jsch, jzlib, javax.inject</Embed-Dependency>-->
+                        <!--<Embed-Dependenc    y>jsch, jzlib, javax.inject</Embed-Dependency>-->
                         <!--<Export-Package>-->
                             <!--javax.inject-->
                         <!--</Export-Package>-->
                         <Sling-Model-Packages>
-                            com.adobebootcamp.core
+                            com.adobebootcamp.core,
+                            com.adobebootcamp.core.models
                         </Sling-Model-Packages>
                     </instructions>
                 </configuration>
@@ -93,6 +94,10 @@
             <artifactId>org.apache.felix.scr.annotations</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
+        </dependency>
+        <dependency>
             <groupId>biz.aQute</groupId>
             <artifactId>bndlib</artifactId>
         </dependency>
@@ -123,9 +128,10 @@
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>aem-api</artifactId>
+            <artifactId>uber-jar</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.sling</groupId>

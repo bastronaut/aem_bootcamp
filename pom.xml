@@ -391,24 +391,17 @@
     <dependencyManagement>
         <dependencies>
             <!-- OSGi Dependencies -->
+        <dependencies>
             <dependency>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>org.apache.felix.scr</artifactId>
-                <version>1.6.0</version>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>2.5</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>org.apache.felix.scr.annotations</artifactId>
-                <version>1.9.6</version>
-                <scope>provided</scope>
-            </dependency>
-
-
-            <dependency>
-                <groupId>biz.aQute</groupId>
-                <artifactId>bndlib</artifactId>
-                <version>1.50.0</version>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.compendium</artifactId>
+                <version>4.2.0</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -418,98 +411,46 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.osgi</groupId>
-                <artifactId>org.osgi.compendium</artifactId>
-                <version>4.2.0</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>com.adobe.acs</groupId>
-                <artifactId>acs-aem-commons-bundle</artifactId>
-                <version>2.9.0</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.adobe.acs</groupId>
-                <artifactId>acs-aem-commons-content</artifactId>
-                <version>2.9.0</version>
-                <scope>provided</scope>
-                <type>content-package</type>
-            </dependency>
-            <dependency>
-                <groupId>javax.inject</groupId>
-                <artifactId>javax.inject</artifactId>
-                <version>1</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <!-- Logging Dependencies -->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>1.5.11</version>
-                <scope>provided</scope>
-            </dependency>
-            <!-- Apache Sling Dependencies -->
-            <dependency>
-                <groupId>com.adobe.aem</groupId>
-                <artifactId>aem-api</artifactId>
-                <version>6.0.0.1</version>
-                <scope>provided</scope>
-            </dependency>
-            
-            <dependency>
-                <groupId>org.apache.sling</groupId>
-                <artifactId>org.apache.sling.models.api</artifactId>
-                <version>1.0.0</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <!-- Servlet API -->
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>2.4</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.servlet.jsp</groupId>
-                <artifactId>jsp-api</artifactId>
-                <version>2.1</version>
-                <scope>provided</scope>
-            </dependency>
-            <!-- JCR -->
-            <dependency>
                 <groupId>javax.jcr</groupId>
                 <artifactId>jcr</artifactId>
                 <version>2.0</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- Taglibs -->
             <dependency>
-                <groupId>com.day.cq.wcm</groupId>
-                <artifactId>cq-wcm-taglib</artifactId>
-                <version>5.7.4</version>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.annotations</artifactId>
+                <version>1.9.12</version>
                 <scope>provided</scope>
-            </dependency>            
-            <!-- Testing -->
+            </dependency>
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.8.2</version>
-                <scope>test</scope>
+                <groupId>biz.aQute</groupId>
+                <artifactId>bndlib</artifactId>
+                <version>1.43.0</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-simple</artifactId>
-                <version>1.5.11</version>
-                <scope>test</scope>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.6</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-all</artifactId>
-                <version>1.9.5</version>
+                <groupId>com.adobe.aem</groupId>
+                <artifactId>uber-jar</artifactId>
+                <version>6.3.0</version>
+                <classifier>obfuscated-apis</classifier>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>2.5</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -517,29 +458,51 @@
                 <artifactId>junit-addons</artifactId>
                 <version>1.4</version>
                 <scope>test</scope>
-            </dependency>
-
-            <!-- WCM IO Extensions -->
-            <dependency>
-                <groupId>io.wcm.maven</groupId>
-                <artifactId>io.wcm.maven.aem-dependencies</artifactId>
-                <version>6.1.0.0000</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.sling.models</artifactId>
-                <version>1.2.2</version>
-                <scope>compile</scope>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>xercesImpl</artifactId>
+                        <groupId>xerces</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>xmlParserAPIs</artifactId>
+                        <groupId>xerces</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
-                <groupId>io.wcm</groupId>
-                <artifactId>io.wcm.wcm.commons</artifactId>
-                <version>0.6.2</version>
-                <scope>compile</scope>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>1.7.6</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jmockit</groupId>
+                <artifactId>jmockit</artifactId>
+                <version>1.18</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <!--
+    Inclusion of repositories in POMs is controversial, to say the least.
+    It would be best if you proxied the Adobe repository using a Maven
+    Repository Manager. Once you do that, remove these sections.
+ -->
+    <repositories>
+        <repository>
+            <id>adobe</id>
+            <name>Adobe Public Repository</name>
+            <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>adobe</id>
+            <name>Adobe Public Repository</name>
+            <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+            <layout>default</layout>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
